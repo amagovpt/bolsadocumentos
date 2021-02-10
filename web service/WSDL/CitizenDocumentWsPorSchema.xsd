@@ -1,0 +1,1300 @@
+<?xml version='1.0' encoding='UTF-8'?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ama.pt/wsdl" xmlns:ns1="http://pi.ama.pt/largefiles" elementFormDefault="unqualified" targetNamespace="http://ama.pt/wsdl" version="1.0">
+
+  <xs:import namespace="http://pi.ama.pt/largefiles" schemaLocation="https://pprdocumentos.eportugal.gov.pt/ama-docs-service-portlet/services/CitizenDocumentWsPort?xsd=citizendocumentws_schema1.xsd"/>
+
+  <xs:element name="acceptSend" type="tns:acceptSend"/>
+
+  <xs:element name="acceptSendResponse" type="tns:acceptSendResponse"/>
+
+  <xs:element name="acceptShare" type="tns:acceptShare"/>
+
+  <xs:element name="acceptShareResponse" type="tns:acceptShareResponse"/>
+
+  <xs:element name="addDocument" type="tns:addDocument"/>
+  
+  <xs:element name="addDocumentAsCitizen" type="tns:addDocumentAsCitizen"/>
+
+  <xs:element name="addDocumentLink" type="tns:addDocumentLink"/>
+
+  <xs:element name="addDocumentLinkResponse" type="tns:addDocumentLinkResponse"/>
+
+  <xs:element name="addDocumentResponse" type="tns:addDocumentResponse"/>
+  
+  <xs:element name="addDocumentAsCitizenResponse" type="tns:addDocumentAsCitizenResponse"/>
+
+  <xs:element name="generateDocumentQRCode" type="tns:generateDocumentQRCode"/>
+
+  <xs:element name="generateDocumentQRCodeResponse" type="tns:generateDocumentQRCodeResponse"/>
+
+  <xs:element name="getDocument" type="tns:getDocument"/>
+
+  <xs:element name="getDocumentFromShareLink" type="tns:getDocumentFromShareLink"/>
+  
+  <xs:element name="getDocumentFile" type="tns:getDocumentFile"/>
+
+  <xs:element name="getDocumentFileResponse" type="tns:getDocumentFileResponse"/>
+
+  <xs:element name="getDocumentLink" type="tns:getDocumentLink"/>
+
+  <xs:element name="getDocumentLinkList" type="tns:getDocumentLinkList"/>
+
+  <xs:element name="getDocumentLinkListResponse" type="tns:getDocumentLinkListResponse"/>
+
+  <xs:element name="getDocumentLinkResponse" type="tns:getDocumentLinkResponse"/>
+
+  <xs:element name="getDocumentList" type="tns:getDocumentList"/>
+
+  <xs:element name="getDocumentListResponse" type="tns:getDocumentListResponse"/>
+
+  <xs:element name="getDocumentResponse" type="tns:getDocumentResponse"/>
+  
+  <xs:element name="getDocumentFromShareLinkResponse" type="tns:getDocumentFromShareLinkResponse"/>
+
+  <xs:element name="getDownloadAuthorization" type="tns:getDownloadAuthorization"/>
+
+  <xs:element name="getDownloadAuthorizationResponse" type="tns:getDownloadAuthorizationResponse"/>
+
+  <xs:element name="getProcessDownloadAuthorizationList" type="tns:getProcessDownloadAuthorizationList"/>
+
+  <xs:element name="getProcessDownloadAuthorizationListResponse" type="tns:getProcessDownloadAuthorizationListResponse"/>
+
+  <xs:element name="getProcessSendList" type="tns:getProcessSendList"/>
+
+  <xs:element name="getProcessSendListResponse" type="tns:getProcessSendListResponse"/>
+
+  <xs:element name="getProcessShareList" type="tns:getProcessShareList"/>
+
+  <xs:element name="getProcessShareListResponse" type="tns:getProcessShareListResponse"/>
+
+  <xs:element name="getQRCodeDocumentFile" type="tns:getQRCodeDocumentFile"/>
+
+  <xs:element name="getQRCodeDocumentFileResponse" type="tns:getQRCodeDocumentFileResponse"/>
+
+  <xs:element name="sendDocumentToCitizen" type="tns:sendDocumentToCitizen"/>
+
+  <xs:element name="sendDocumentToCitizenResponse" type="tns:sendDocumentToCitizenResponse"/>
+
+  <xs:element name="sendDocumentToEntity" type="tns:sendDocumentToEntity"/>
+
+  <xs:element name="sendDocumentToEntityResponse" type="tns:sendDocumentToEntityResponse"/>
+
+  <xs:element name="sendDocumentToLawyer" type="tns:sendDocumentToLawyer"/>
+
+  <xs:element name="sendDocumentToLawyerResponse" type="tns:sendDocumentToLawyerResponse"/>
+
+  <xs:element name="sendDocumentToNotary" type="tns:sendDocumentToNotary"/>
+
+  <xs:element name="sendDocumentToNotaryResponse" type="tns:sendDocumentToNotaryResponse"/>
+
+  <xs:element name="sendDocumentToSolicitor" type="tns:sendDocumentToSolicitor"/>
+
+  <xs:element name="sendDocumentToSolicitorResponse" type="tns:sendDocumentToSolicitorResponse"/>
+
+  <xs:element name="shareDocumentWithCitizen" type="tns:shareDocumentWithCitizen"/>
+
+  <xs:element name="shareDocumentWithCitizenResponse" type="tns:shareDocumentWithCitizenResponse"/>
+
+  <xs:element name="shareDocumentWithEntity" type="tns:shareDocumentWithEntity"/>
+
+  <xs:element name="shareDocumentWithEntityResponse" type="tns:shareDocumentWithEntityResponse"/>
+
+  <xs:element name="shareDocumentWithLawyer" type="tns:shareDocumentWithLawyer"/>
+
+  <xs:element name="shareDocumentWithLawyerResponse" type="tns:shareDocumentWithLawyerResponse"/>
+
+  <xs:element name="shareDocumentWithNotary" type="tns:shareDocumentWithNotary"/>
+
+  <xs:element name="shareDocumentWithNotaryResponse" type="tns:shareDocumentWithNotaryResponse"/>
+
+  <xs:element name="shareDocumentWithSolicitor" type="tns:shareDocumentWithSolicitor"/>
+
+  <xs:element name="shareDocumentWithSolicitorResponse" type="tns:shareDocumentWithSolicitorResponse"/>
+
+  <xs:element name="shareFolderWithCitizen" type="tns:shareFolderWithCitizen"/>
+
+  <xs:element name="shareFolderWithCitizenResponse" type="tns:shareFolderWithCitizenResponse"/>
+
+  <xs:element name="shareFolderWithEntity" type="tns:shareFolderWithEntity"/>
+
+  <xs:element name="shareFolderWithEntityResponse" type="tns:shareFolderWithEntityResponse"/>
+
+  <xs:element name="shareFolderWithLawyer" type="tns:shareFolderWithLawyer"/>
+
+  <xs:element name="shareFolderWithLawyerResponse" type="tns:shareFolderWithLawyerResponse"/>
+
+  <xs:element name="shareFolderWithNotary" type="tns:shareFolderWithNotary"/>
+
+  <xs:element name="shareFolderWithNotaryResponse" type="tns:shareFolderWithNotaryResponse"/>
+
+  <xs:element name="shareFolderWithSolicitor" type="tns:shareFolderWithSolicitor"/>
+
+  <xs:element name="shareFolderWithSolicitorResponse" type="tns:shareFolderWithSolicitorResponse"/>
+
+  <xs:complexType name="shareFolderWithCitizen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shareFolderWithCitizenInput" type="tns:ShareFolderWithCitizenInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareFolderWithCitizenInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="CitizenNic" type="xs:string"/>
+      <xs:element name="CitizenName" type="xs:string"/>
+      <xs:element minOccurs="0" name="CitizenEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="FolderPathList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+      <xs:element name="ExpirationDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserAuthentication">
+    <xs:sequence>
+      <xs:element name="EntityNif" type="xs:string"/>
+      <xs:element name="Username" type="xs:string"/>
+      <xs:element name="Password" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareFolderWithCitizenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ShareFolderWithCitizenOutput" type="tns:ShareFolderWithCitizenOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareFolderWithCitizenOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Status">
+    <xs:sequence>
+      <xs:element name="Code" type="xs:string"/>
+      <xs:element name="Description" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addDocumentLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addDocumentLinkInput" type="tns:AddLinkInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AddLinkInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="DocumentLinkToAdd" type="tns:DocumentLinkToAdd"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DocumentLinkToAdd">
+    <xs:sequence>
+      <xs:element name="LinkUrl" type="xs:string"/>
+      <xs:element minOccurs="0" name="FolderPath" type="xs:string"/>
+      <xs:element minOccurs="0" name="ValidityDate" type="xs:dateTime"/>
+      <xs:element name="Title" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorId" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorType" type="xs:string"/>
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ResourceType" type="xs:string"/>
+      <xs:element minOccurs="0" name="SecurityClassification" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConservationTime" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addDocumentLinkResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddDocumentLinkOutput" type="tns:AddDocumentLinkOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AddDocumentLinkOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element name="DocumentId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="acceptShare">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acceptShareInput" type="tns:AcceptShareInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AcceptShareInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="ShareId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="acceptShareResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AcceptShareOutput" type="tns:AcceptShareOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AcceptShareOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element name="DocumentId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocumentFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getDocumentFileInput" type="tns:GetDocumentFileInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDocumentFileInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="DocumentId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocumentFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetDocumentFileOutput" type="tns:GetDocumentFileOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDocumentFileOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element ref="ns1:AttachContext"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareDocumentWithEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shareDocumentWithEntityInput" type="tns:ShareDocumentWithEntityInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareDocumentWithEntityInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="EntityNif" type="xs:string"/>
+      <xs:element name="EntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="EntityEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="DocumentIdList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+      <xs:element name="ExpirationDate" type="xs:dateTime"/>
+      <xs:element name="HasWritePermission" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareDocumentWithEntityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ShareDocumentWithEntityOutput" type="tns:ShareDocumentWithEntityOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareDocumentWithEntityOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareFolderWithLawyer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shareFolderWithLawyerInput" type="tns:ShareFolderWithLawyerInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareFolderWithLawyerInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="LawyerNoa" type="xs:string"/>
+      <xs:element name="LawyerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="LawyerEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="FolderPathList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+      <xs:element name="ExpirationDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareFolderWithLawyerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ShareFolderWithLawyerOutput" type="tns:ShareFolderWithLawyerOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareFolderWithLawyerOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getProcessShareList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getProcessShareListInput" type="tns:GetProcessShareListInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetProcessShareListInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="Process" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getProcessShareListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetProcessShareListOutput" type="tns:GetProcessShareListOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetProcessShareListOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ShareIdList" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendDocumentToEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sendDocumentToEntityInput" type="tns:SendDocumentToEntityInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SendDocumentToEntityInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="EntityNif" type="xs:string"/>
+      <xs:element name="EntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="EntityEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="DocumentIdList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendDocumentToEntityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SendDocumentToEntityOutput" type="tns:SendDocumentToEntityOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SendDocumentToEntityOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addDocumentInput" type="tns:AddDocumentInput"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="addDocumentAsCitizen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addDocumentAsCitizenInput" type="tns:addDocumentAsCitizenInput"/>
+    </xs:sequence>
+   </xs:complexType>
+
+  <xs:complexType name="AddDocumentInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="DocumentToAdd" type="tns:DocumentToAdd"/>
+      <xs:element ref="ns1:AttachContext"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="addDocumentAsCitizenInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="CitizenNic" type="xs:string"/>
+      <xs:element name="CitizenName" type="xs:string"/>
+      <xs:element minOccurs="0" name="CitizenEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="DocumentIdList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+      <xs:element name="DocumentToAdd" type="tns:DocumentToAdd"/>
+      <xs:element ref="ns1:AttachContext"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DocumentToAdd">
+    <xs:sequence>
+      <xs:element name="Filename" type="xs:string"/>
+      <xs:element name="MimeType" type="xs:string"/>
+      <xs:element minOccurs="0" name="FolderPath" type="xs:string"/>
+      <xs:element minOccurs="0" name="ValidityDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Title" type="xs:string"/>
+      <xs:element minOccurs="0" name="ClassificationCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="Subject" type="xs:string"/>
+      <xs:element minOccurs="0" name="Language" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Tags" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorId" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorType" type="xs:string"/>
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ResourceType" type="xs:string"/>
+      <xs:element minOccurs="0" name="Country" type="xs:string"/>
+      <xs:element minOccurs="0" name="SecurityClassification" type="xs:string"/>
+      <xs:element minOccurs="0" name="Price" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConservationTime" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addDocumentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddDocumentOutput" type="tns:AddDocumentOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AddDocumentOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element name="DocumentId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>  
+  
+  <xs:complexType name="addDocumentAsCitizenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddDocumentAsCitizenOutput" type="tns:AddDocumentAsCitizenOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AddDocumentAsCitizenOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element name="DocumentId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareFolderWithSolicitor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shareFolderWithSolicitorInput" type="tns:ShareFolderWithSolicitorInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareFolderWithSolicitorInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="SolicitorNcs" type="xs:string"/>
+      <xs:element name="SolicitorName" type="xs:string"/>
+      <xs:element minOccurs="0" name="SolicitorEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="FolderPathList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+      <xs:element name="ExpirationDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareFolderWithSolicitorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ShareFolderWithSolicitorOutput" type="tns:ShareFolderWithSolicitorOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareFolderWithSolicitorOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareDocumentWithLawyer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shareDocumentWithLawyerInput" type="tns:ShareDocumentWithLawyerInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareDocumentWithLawyerInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="LawyerNoa" type="xs:string"/>
+      <xs:element name="LawyerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="LawyerEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="DocumentIdList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+      <xs:element name="ExpirationDate" type="xs:dateTime"/>
+      <xs:element name="HasWritePermission" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareDocumentWithLawyerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ShareDocumentWithLawyerOutput" type="tns:ShareDocumentWithLawyerOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareDocumentWithLawyerOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareDocumentWithCitizen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shareDocumentWithCitizenInput" type="tns:ShareDocumentWithCitizenInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareDocumentWithCitizenInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="CitizenNic" type="xs:string"/>
+      <xs:element name="CitizenName" type="xs:string"/>
+      <xs:element minOccurs="0" name="CitizenEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="DocumentIdList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+      <xs:element name="ExpirationDate" type="xs:dateTime"/>
+      <xs:element name="HasWritePermission" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareDocumentWithCitizenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ShareDocumentWithCitizenOutput" type="tns:ShareDocumentWithCitizenOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareDocumentWithCitizenOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocumentList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getDocumentListInput" type="tns:GetDocumentListInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDocumentListInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element minOccurs="0" name="DocumentSearchParameters" type="tns:DocumentSearchParameters"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DocumentSearchParameters">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MimeType" type="xs:string"/>
+      <xs:element minOccurs="0" name="FolderPath" type="xs:string"/>
+      <xs:element minOccurs="0" name="ValidityDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Title" type="xs:string"/>
+      <xs:element minOccurs="0" name="ClassificationCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProducerDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="Subject" type="xs:string"/>
+      <xs:element minOccurs="0" name="Language" type="xs:string"/>
+      <xs:element minOccurs="0" name="EditorId" type="xs:string"/>
+      <xs:element minOccurs="0" name="EditorDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="EditorType" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Tags" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorId" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorType" type="xs:string"/>
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ResourceType" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataFormat" type="xs:string"/>
+      <xs:element minOccurs="0" name="Country" type="xs:string"/>
+      <xs:element minOccurs="0" name="SecurityClassification" type="xs:string"/>
+      <xs:element minOccurs="0" name="Price" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConservationTime" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocumentListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetDocumentListOutput" type="tns:GetDocumentListOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDocumentListOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="DocumentList" type="tns:Document"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Document">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FolderPath" type="xs:string"/>
+      <xs:element minOccurs="0" name="ValidityDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Metadata" type="tns:Metadata"/>
+      <xs:element minOccurs="0" name="Url" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Metadata">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Designation" type="tns:Designation"/>
+      <xs:element minOccurs="0" name="Identifier" type="tns:Identifier"/>
+      <xs:element minOccurs="0" name="Producer" type="tns:Producer"/>
+      <xs:element minOccurs="0" name="Subject" type="xs:string"/>
+      <xs:element minOccurs="0" name="Description" type="tns:Description"/>
+      <xs:element minOccurs="0" name="Editor" type="tns:Editor"/>
+      <xs:element minOccurs="0" name="Collaborator" type="tns:Collaborator"/>
+      <xs:element minOccurs="0" name="Date" type="tns:Date"/>
+      <xs:element minOccurs="0" name="ResourceType" type="xs:string"/>
+      <xs:element minOccurs="0" name="Format" type="tns:Format"/>
+      <xs:element minOccurs="0" name="Coverage" type="tns:Coverage"/>
+      <xs:element minOccurs="0" name="Accessibility" type="tns:Accessibility"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Recipient" type="tns:Recipient"/>
+      <xs:element minOccurs="0" name="Evaluation" type="tns:Evaluation"/>
+      <xs:element minOccurs="0" name="Availability" type="tns:Availability"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Designation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Title" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Identifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdentifierType" type="xs:string"/>
+      <xs:element minOccurs="0" name="ResourceIdentifier" type="xs:string"/>
+      <xs:element minOccurs="0" name="ClassificationCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Producer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProducerDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProducerType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Description">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Language" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Tags" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Editor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EditorId" type="xs:string"/>
+      <xs:element minOccurs="0" name="EditorDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="Type" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Collaborator">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CollaboratorId" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Date">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="RegistrationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="AvailableDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Format">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataFormat" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Coverage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Spatial" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Accessibility">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SecurityClassification" type="xs:string"/>
+      <xs:element minOccurs="0" name="ElectronicSignatureAuthentication" type="xs:string"/>
+      <xs:element minOccurs="0" name="AccessPermission" type="xs:string"/>
+      <xs:element minOccurs="0" name="CirculationList" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Recipient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Sector" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecipientId" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecipientDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecipientType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Evaluation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConservationTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="FinalDestiny" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Availability">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Price" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareFolderWithEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shareFolderWithEntityInput" type="tns:ShareFolderWithEntityInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareFolderWithEntityInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="EntityNif" type="xs:string"/>
+      <xs:element name="EntityName" type="xs:string"/>
+      <xs:element minOccurs="0" name="EntityEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="FolderPathList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+      <xs:element name="ExpirationDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareFolderWithEntityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ShareFolderWithEntityOutput" type="tns:ShareFolderWithEntityOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareFolderWithEntityOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareDocumentWithSolicitor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shareDocumentWithSolicitorInput" type="tns:ShareDocumentWithSolicitorInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareDocumentWithSolicitorInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="SolicitorNcs" type="xs:string"/>
+      <xs:element name="SolicitorName" type="xs:string"/>
+      <xs:element minOccurs="0" name="SolicitorEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="DocumentIdList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+      <xs:element name="ExpirationDate" type="xs:dateTime"/>
+      <xs:element name="HasWritePermission" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareDocumentWithSolicitorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ShareDocumentWithSolicitorOutput" type="tns:ShareDocumentWithSolicitorOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareDocumentWithSolicitorOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocumentLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getDocumentLinkInput" type="tns:GetDocumentLinkInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDocumentLinkInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="DocumentId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocumentLinkResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetDocumentLinkOutput" type="tns:GetDocumentLinkOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDocumentLinkOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element minOccurs="0" name="DocumentLink" type="tns:DocumentLink"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DocumentLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LinkUrl" type="xs:string"/>
+      <xs:element minOccurs="0" name="FolderPath" type="xs:string"/>
+      <xs:element minOccurs="0" name="ValidityDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Title" type="xs:string"/>
+      <xs:element minOccurs="0" name="ClassificationCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProducerDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="EditorDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="EditorId" type="xs:string"/>
+      <xs:element minOccurs="0" name="EditorType" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorId" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorType" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConservationTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="SecurityClassification" type="xs:string"/>
+      <xs:element minOccurs="0" name="ResourceType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getQRCodeDocumentFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getQRCodeDocumentFileInput" type="tns:GetQRCodeDocumentFileInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetQRCodeDocumentFileInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="Qrkey" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getQRCodeDocumentFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetQRCodeDocumentFileOutput" type="tns:GetQRCodeDocumentFileOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetQRCodeDocumentFileOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element ref="ns1:AttachContext"/>
+      <xs:element minOccurs="0" name="ExpirationDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="acceptSend">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acceptSendInput" type="tns:AcceptSendInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AcceptSendInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="SendId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="acceptSendResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AcceptSendOutput" type="tns:AcceptSendOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AcceptSendOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element name="DocumentId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getDocumentInput" type="tns:GetDocumentInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDocumentInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="DocumentId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocumentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetDocumentOutput" type="tns:GetDocumentOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDocumentOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element minOccurs="0" name="Document" type="tns:Document"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  
+    <xs:complexType name="getDocumentFromShareLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getDocumentFromShareLinkInput" type="tns:getDocumentFromShareLinkInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocumentFromShareLinkInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="DocumentLink" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocumentFromShareLinkResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getDocumentFromShareLinkOutput" type="tns:getDocumentFromShareLinkOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocumentFromShareLinkOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element minOccurs="0" name="LargeFilesKey" type="tns:Document"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  
+  
+
+  <xs:complexType name="sendDocumentToCitizen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sendDocumentToCitizenInput" type="tns:SendDocumentToCitizenInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SendDocumentToCitizenInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="CitizenNic" type="xs:string"/>
+      <xs:element name="CitizenName" type="xs:string"/>
+      <xs:element minOccurs="0" name="CitizenEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="DocumentIdList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendDocumentToCitizenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SendDocumentToCitizenOutput" type="tns:SendDocumentToCitizenOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SendDocumentToCitizenOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocumentLinkList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getDocumentLinkListInput" type="tns:GetDocumentLinkListInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDocumentLinkListInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element minOccurs="0" name="DocumentLinkSearchParameters" type="tns:DocumentLinkSearchParameters"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DocumentLinkSearchParameters">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FolderPath" type="xs:string"/>
+      <xs:element minOccurs="0" name="ValidityDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Title" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProducerDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="EditorId" type="xs:string"/>
+      <xs:element minOccurs="0" name="EditorDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="EditorType" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorId" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorDesignation" type="xs:string"/>
+      <xs:element minOccurs="0" name="CollaboratorType" type="xs:string"/>
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ResourceType" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataFormat" type="xs:string"/>
+      <xs:element minOccurs="0" name="SecurityClassification" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConservationTime" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDocumentLinkListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetDocumentLinkListOutput" type="tns:GetDocumentLinkListOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDocumentLinkListOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="DocumentLinkList" type="tns:DocumentLink"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareFolderWithNotary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shareFolderWithNotaryInput" type="tns:ShareFolderWithNotaryInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareFolderWithNotaryInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="NotaryNon" type="xs:string"/>
+      <xs:element name="NotaryName" type="xs:string"/>
+      <xs:element minOccurs="0" name="NotaryEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="FolderPathList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+      <xs:element name="ExpirationDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareFolderWithNotaryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ShareFolderWithNotaryOutput" type="tns:ShareFolderWithNotaryOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareFolderWithNotaryOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendDocumentToLawyer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sendDocumentToLawyerInput" type="tns:SendDocumentToLawyerInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SendDocumentToLawyerInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="LawyerNoa" type="xs:string"/>
+      <xs:element name="LawyerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="LawyerEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="DocumentIdList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendDocumentToLawyerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SendDocumentToLawyerOutput" type="tns:SendDocumentToLawyerOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SendDocumentToLawyerOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getProcessSendList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getProcessSendListInput" type="tns:GetProcessSendListInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetProcessSendListInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="Process" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getProcessSendListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetProcessSendListOutput" type="tns:GetProcessSendListOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetProcessSendListOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="SendIdList" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="generateDocumentQRCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="generateDocumentQRCodeInput" type="tns:GenerateDocumentQRCodeInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GenerateDocumentQRCodeInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="DocumentId" type="xs:string"/>
+      <xs:element name="ExpirationDate" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="generateDocumentQRCodeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GenerateDocumentQRCodeOutput" type="tns:GenerateDocumentQRCodeOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GenerateDocumentQRCodeOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element minOccurs="0" name="Qrkey" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareDocumentWithNotary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shareDocumentWithNotaryInput" type="tns:ShareDocumentWithNotaryInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareDocumentWithNotaryInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="NotaryNon" type="xs:string"/>
+      <xs:element name="NotaryName" type="xs:string"/>
+      <xs:element minOccurs="0" name="NotaryEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="DocumentIdList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+      <xs:element name="ExpirationDate" type="xs:dateTime"/>
+      <xs:element name="HasWritePermission" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="shareDocumentWithNotaryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ShareDocumentWithNotaryOutput" type="tns:ShareDocumentWithNotaryOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShareDocumentWithNotaryOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendDocumentToNotary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sendDocumentToNotaryInput" type="tns:SendDocumentToNotaryInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SendDocumentToNotaryInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="NotaryNon" type="xs:string"/>
+      <xs:element name="NotaryName" type="xs:string"/>
+      <xs:element minOccurs="0" name="NotaryEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="DocumentIdList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendDocumentToNotaryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SendDocumentToNotaryOutput" type="tns:SendDocumentToNotaryOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SendDocumentToNotaryOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getProcessDownloadAuthorizationList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getProcessDownloadAuthorizationListInput" type="tns:GetProcessDownloadAuthorizationListInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetProcessDownloadAuthorizationListInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="Process" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getProcessDownloadAuthorizationListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetProcessDownloadAuthorizationListOutput" type="tns:GetProcessDownloadAuthorizationListOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetProcessDownloadAuthorizationListOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="DownloadAuthorizationIdList" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDownloadAuthorization">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getDownloadAuthorizationInput" type="tns:GetDownloadAuthorizationInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDownloadAuthorizationInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="DownloadAuthorizationId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getDownloadAuthorizationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetDownloadAuthorizationOutput" type="tns:GetDownloadAuthorizationOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDownloadAuthorizationOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+      <xs:element ref="ns1:AttachContext"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendDocumentToSolicitor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sendDocumentToSolicitorInput" type="tns:SendDocumentToSolicitorInput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SendDocumentToSolicitorInput">
+    <xs:sequence>
+      <xs:element name="UserAuthentication" type="tns:UserAuthentication"/>
+      <xs:element name="SolicitorNcs" type="xs:string"/>
+      <xs:element name="SolicitorName" type="xs:string"/>
+      <xs:element minOccurs="0" name="SolicitorEmail" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="DocumentIdList" type="xs:string"/>
+      <xs:element name="Process" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendDocumentToSolicitorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SendDocumentToSolicitorOutput" type="tns:SendDocumentToSolicitorOutput"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SendDocumentToSolicitorOutput">
+    <xs:sequence>
+      <xs:element name="Status" type="tns:Status"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
