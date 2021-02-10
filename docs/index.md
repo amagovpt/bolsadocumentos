@@ -1,5 +1,5 @@
 # Integração de Serviços Comuns - Bolsa de Documentos
-A ISCAPI (Integração de Serviços Comuns API) é uma camada de integração, que disponibiliza um conjunto de operações com o objetivo de agilizar todos os processos de integração de sistemas externos à Plataforma de Serviços do [ePortugal](https://ePortugal.gov.pt).
+A ISCAPI (Integração de Serviços Comuns API) é uma camada de integração, que disponibiliza um conjunto de operações com o objetivo de agilizar todos os processos de integração de sistemas externos à Bolsa de Documentos do [ePortugal](https://ePortugal.gov.pt).
 
 ## Operações
 [Consultar as operações disponíveis](operacoes)
