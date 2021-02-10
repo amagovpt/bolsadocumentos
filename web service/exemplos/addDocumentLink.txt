@@ -1,0 +1,29 @@
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://ama.pt/wsdl">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsdl:addDocumentLink>
+         <!--Optional:-->
+       <addDocumentLinkInput>
+    <UserAuthentication>
+       <EntityNif>[NIF ENTIDADE]</EntityNif>
+          <Username>[UTILIZADOR]</Username>
+         <Password>[PASSWORD]</Password>
+​    </UserAuthentication>
+    <DocumentLinkToAdd>
+      <LinkUrl>https://teste.pt</LinkUrl>
+      <FolderPath />
+      <ValidityDate>2020-02-08T23:59:59</ValidityDate>
+      <Title>Teste</Title>
+      <CollaboratorId />
+      <CollaboratorDesignation />
+      <CollaboratorType>PUBLICENTITY</CollaboratorType>
+      <CreationDate>2020-01-20T19:12:34</CreationDate>
+      <ResourceType>SERVAP</ResourceType>
+      <SecurityClassification>RESERVED</SecurityClassification>
+      <ConservationTime>1</ConservationTime>
+    </DocumentLinkToAdd>
+  </addDocumentLinkInput>
+      </wsdl:addDocumentLink>
+   </soapenv:Body>
+</soapenv:Envelope>

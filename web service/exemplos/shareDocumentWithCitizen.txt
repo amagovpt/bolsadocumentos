@@ -1,0 +1,20 @@
+?xml version="1.0" encoding="utf-16"?>
+<ns3:shareDocumentWithCitizen
+ xmlns:ns2="http://pi.ama.pt/largefiles"
+ xmlns:ns3="http://ama.pt/wsdl">
+  <shareDocumentWithCitizenInput>
+    <UserAuthentication>
+      <EntityNif>[NIFENTIDADE]</EntityNif>
+          <Username>[UTILIZADOR]</Username>
+         <Password>[PASSWORD]</Password>
+    </UserAuthentication>
+    <CitizenNic>[NIC]</CitizenNic>
+    <CitizenName>[NOME CIDADÃO]</CitizenName>
+    <CitizenEmail>[EMAIL CIDADÃO]</CitizenEmail>
+    <DocumentIdList>896304</DocumentIdList>
+    <Process>[CÓDIGO IDENTIFICADO DO PROCESSO QUE ORIGINOU O DOCUMENTO]</Process>
+    <Comments>comentário de teste</Comments>
+    <ExpirationDate />
+    <HasWritePermission>true</HasWritePermission>
+  </shareDocumentWithCitizenInput>
+</ns3:shareDocumentWithCitizen>

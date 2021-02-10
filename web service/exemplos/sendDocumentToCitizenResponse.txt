@@ -1,0 +1,13 @@
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns2:sendDocumentToCitizenResponse xmlns:ns2="http://ama.pt/wsdl" xmlns:ns3="http://pi.ama.pt/largefiles">
+         <SendDocumentToCitizenOutput>
+            <Status>
+               <Code>SUCCESS</Code>
+               <Description>Request executed successfully.</Description>
+            </Status>
+         </SendDocumentToCitizenOutput>
+      </ns2:sendDocumentToCitizenResponse>
+   </soap:Body>
+</soap:Envelope>

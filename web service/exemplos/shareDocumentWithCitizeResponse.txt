@@ -1,0 +1,27 @@
+
+<soapenv:Envelope 
+xmlns:wsa="http://www.w3.org/2005/08/addressing"
+xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+xmlns:lar="http://pi.ama.pt/largefiles">
+       <soapenv:Header>
+    <wsa:Action>http://ama.pt/wsdl/CitizenDocumentWs/shareDocumentWithCitizenResponse</wsa:Action>
+    <wsa:MessageID>0ba1d0bc-ff57-4bd5-9c35-f165f366d6b5</wsa:MessageID>
+    <wsa:To>http://0.0.0.0/AMADocumentsCallback</wsa:To>
+    <wsa:RelatesTo>uuid:0aef8d81-7a4f-4f87-9da8-0c05b2c7b9f5</wsa:RelatesTo>
+  </soapenv:Header>
+
+   <soapenv:Body>
+      <lar:shareDocumentWithCitizenResponse>
+         <!--Optional:-->
+         <lar:output>
+            <!--Optional:-->
+            <Status>
+               <!--Optional:-->
+               <Code>SUCCESS</Code>
+               <!--Optional:-->
+               <Description>OK</Description>
+            </Status>
+         </lar:output>
+      </lar:shareDocumentWithCitizenResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

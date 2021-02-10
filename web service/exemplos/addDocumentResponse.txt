@@ -1,0 +1,13 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns2:addDocumentResponse xmlns:ns2="http://ama.pt/wsdl" xmlns:ns3="http://pi.ama.pt/largefiles">
+         <AddDocumentOutput>
+            <Status>
+               <Code>SUCCESS</Code>
+               <Description>Request executed successfully.</Description>
+            </Status>
+            <DocumentId>895899</DocumentId>
+         </AddDocumentOutput>
+      </ns2:addDocumentResponse>
+   </soap:Body>
+</soap:Envelope>

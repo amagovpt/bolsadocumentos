@@ -1,0 +1,24 @@
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://ama.pt/wsdl">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsdl:sendDocumentToCitizen>
+         <!--Optional:-->
+         <sendDocumentToCitizenInput>
+            <UserAuthentication>
+              <EntityNif>[NIFENTIDADE]</EntityNif>
+               <Username>[UTILIZADOR]</Username>
+               <Password>[PASSWORD]</Password>
+
+            </UserAuthentication>
+            <CitizenNic>[NIC]</CitizenNic>
+            <CitizenName>[NOME CIDADÃO]</CitizenName>
+            <!--Optional:-->
+            <CitizenEmail>[EMAIL CIDADÃO]</CitizenEmail>
+            <!--1 or more repetitions:-->
+            <DocumentIdList>[ID DO DOCUMENTO NA BOLSA]</DocumentIdList>
+         
+         </sendDocumentToCitizenInput>
+      </wsdl:sendDocumentToCitizen>
+   </soapenv:Body>
+</soapenv:Envelope>
