@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+# Integração de Serviços Comuns - Bolsa de Documentos
+A ISCAPI (Integração de Serviços Comuns API) é uma camada de integração, que disponibiliza um conjunto de operações com o objetivo de agilizar todos os processos de integração de sistemas externos à Plataforma de Serviços do [ePortugal](https://ePortugal.gov.pt).
 
-You can use the [editor on GitHub](https://github.com/amagovpt/bolsadocumentos/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+## Operações
+[Consultar as operações disponíveis](operacoes)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Tabelas de valores
+[Consultar as tabelas de valores](tabeladevalores)
 
-### Markdown
+## Plataforma de Integração
+[Consultar aqui a informação sobre a Plataforma de Integração](iap)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Transferência de Ficheiros
+[Consultar aqui a informação sobre a transferência de ficheiros](largefiles)
 
-```markdown
-Syntax highlighted code block
+## Estrutura Fixa
+[Consultar aqui a informação sobre a estrutura fixa](estruturafixa)
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/amagovpt/bolsadocumentos/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Software
+![GSD1 phenotype]({{ BASE_PATH }}/ISCAPI/assets/images/liferay.png)
