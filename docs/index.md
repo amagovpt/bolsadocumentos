@@ -13,8 +13,6 @@ A ISCAPI (Integração de Serviços Comuns API) é uma camada de integração, q
 ## Transferência de Ficheiros
 [Consultar aqui a informação sobre a transferência de ficheiros](largefiles)
 
-## Estrutura Fixa
-[Consultar aqui a informação sobre a estrutura fixa](estruturafixa)
 
 ## Software
 ![GSD1 phenotype]({{ BASE_PATH }}/ISCAPI/assets/images/liferay.png)
