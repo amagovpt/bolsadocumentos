@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ama.pt/wsdl" xmlns:ns1="http://pi.ama.pt/largefiles" elementFormDefault="unqualified" targetNamespace="http://ama.pt/wsdl" version="1.0">
 
-  <xs:import namespace="http://pi.ama.pt/largefiles" schemaLocation="https://pprdocumentos.eportugal.gov.pt/ama-docs-service-portlet/services/CitizenDocumentWsPort?xsd=citizendocumentws_schema1.xsd"/>
+  <xs:import namespace="http://pi.ama.pt/largefiles" schemaLocation="CitizenDocumentWsPort.xsd"/>
 
   <xs:element name="acceptSend" type="tns:acceptSend"/>
 
