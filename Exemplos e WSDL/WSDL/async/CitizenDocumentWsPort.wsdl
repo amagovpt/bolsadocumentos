@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ama.pt/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CitizenDocumentWsService" targetNamespace="http://ama.pt/wsdl">
+  <wsdl:types>
+<schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ama.pt/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://www.w3.org/2001/XMLSchema">
+  		
+  <import namespace="http://ama.pt/wsdl" schemaLocation="CitizenDocumentWsPorSchema.xsd"/>
+	
+</schema>
+  </wsdl:types>
+   <wsdl:message name="sendDocumentToCitizenResponse">
+    <wsdl:part element="tns:sendDocumentToCitizenResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="addDocumentResponse">
+    <wsdl:part element="tns:addDocumentResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  
+  <wsdl:portType name="CitizenDocumentWs">
+ 
+    <wsdl:operation name="addDocumentResponse">
+      <wsdl:input message="tns:addDocumentResponse" name="addDocumentResponse" wsam:Action="http://ama.pt/wsdl/CitizenDocumentWs/addDocumentResponse" wsaw:Action="http://ama.pt/wsdl/CitizenDocumentWs/addDocumentResponse">
+    </wsdl:input>
+     
+    </wsdl:operation>
+	
+	<wsdl:operation name="sendDocumentToCitizenResponse">
+      <wsdl:input message="tns:sendDocumentToCitizenResponse" name="sendDocumentToCitizenResponse" wsam:Action="http://ama.pt/wsdl/CitizenDocumentWs/sendDocumentToCitizenResponse" wsaw:Action="http://ama.pt/wsdl/CitizenDocumentWs/sendDocumentToCitizenResponse">
+    </wsdl:input>
+     
+    </wsdl:operation>
+   
+  </wsdl:portType>
+  <wsdl:binding name="CitizenDocumentWsServiceSoapBinding" type="tns:CitizenDocumentWs">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsaw:UsingAddressing xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsdl:required="false"/>
+    <wsp:PolicyReference URI="#CitizenDocumentWsServiceSoapBinding_WSAM_Addressing_Policy"/>
+   
+   
+    <wsdl:operation name="addDocumentResponse">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addDocumentResponse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    
+    
+     <wsdl:operation name="sendDocumentToCitizenResponse">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sendDocumentToCitizenResponse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    
+  </wsdl:binding>
+  <wsdl:service name="CitizenDocumentWsService">
+    <wsdl:port binding="tns:CitizenDocumentWsServiceSoapBinding" name="CitizenDocumentWsPort">
+      <soap:address location="http://enderecoiap/entidade/"/>
+    </wsdl:port>
+  </wsdl:service>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="CitizenDocumentWsServiceSoapBinding_WSAM_Addressing_Policy"><wsam:Addressing wsp:Optional="true"><wsp:Policy/></wsam:Addressing></wsp:Policy>
+</wsdl:definitions>
