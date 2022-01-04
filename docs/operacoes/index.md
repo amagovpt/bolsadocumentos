@@ -31,32 +31,14 @@ O “TTL” é o número de dias que o ficheiro deve ficar disponível para down
 
 O seguinte diagrama representa um fluxo de troca de mensagens numa invocação de webservice (com iAP já incluído como intermediário na comunicação via webservices), onde a entidade A envia um documento para a entidade B:
 
-```mermaid
-sequenceDiagram
-Entidade A ->> LargeFiles/iAP: HTTP POST <br><br>(upload de ficheiro <br><br>com parâmetro "File" e guid com parâmetro "Id")
-LargeFiles/iAP -->> Entidade A: HTTP OK
-Entidade A ->> LargeFiles/iAP: Invocação webservice disponibilizado pela Entidade B <br><br>(inclui na mensagem SOAP o payload com o GUID)
-LargeFiles/iAP -->> Entidade A: HTTP ACCEPTED
-LargeFiles/iAP ->> Entidade B: Invocação webservice disponibilizado pela Entidade B <br><br>(inclui na mensagem SOAP o payload com o GUID)
-Entidade B -->> LargeFiles/iAP: HTTP ACCEPTED
-Entidade B ->> LargeFiles/iAP: HTTP GET <br><br>(download de ficheiro com parâmetro "Id")
-Entidade B -->> LargeFiles/iAP: Resposta da invocação de webservice
-LargeFiles/iAP -->> Entidade A: Resposta da invocação de webservice
-```
+![Integração com LargeFiles - Diagrama](https://github.com/amagovpt/bolsadocumentos/blob/master/assets/images/IntegracaoLargeFiles_diagrama.jpg?raw=true)
 
 # WebServices disponibilizados
 ## Fluxo de invocação de webservices
 O seguinte diagrama representa o fluxo de comunicação esperado, já com iAP como intermediário:
 
-```mermaid
-sequenceDiagram
-Entidade ->> iAP: Request Webservice <br><br>(com ws-addressing)
-iAP -->> Entidade: HTTP ACCEPTED
-iAP ->> Bolsa de Documentos do Cidadão: Request Webservice <br><br>(com ws-addressing)
-Bolsa de Documentos do Cidadão -->> iAP: HTTP ACCEPTED
-Bolsa de Documentos do Cidadão -->> iAP: Response Webservice
-iAP -->> Entidade: Response Webservice
-```
+![Invocação de webservices - Diagrama](https://github.com/amagovpt/bolsadocumentos/blob/master/assets/images/InvocacaoWebservices_diagrama.jpg?raw=true)
+
 ## Parâmetros comuns
 ### Parâmetros de entrada
  - **UserAuthentication:**
@@ -94,18 +76,8 @@ Este webservice tem como objetivo adicionar um documento à área reservada da e
 
 O seguinte diagrama representa o fluxo de invocação do webservice:
 
-```mermaid
-sequenceDiagram
-Entidade ->> LargeFiles/iAP: HTTP POST <br><br>(upload de ficheiro <br><br>com parâmetro "File" e guid com parâmetro "Id")
-LargeFiles/iAP -->> Entidade: HTTP OK
-Entidade ->> LargeFiles/iAP: AddDocument <br><br>(invocação do webservice incluíndo payload)
-LargeFiles/iAP -->> Entidade: HTTP ACCEPTED
-LargeFiles/iAP ->> Bolsa de Documentos do Cidadão: AddDocument
-Bolsa de Documentos do Cidadão -->> LargeFiles/iAP: HTTP ACCEPTED
-Bolsa de Documentos do Cidadão ->> LargeFiles/iAP: HTTP GET <br><br>(download de ficheiro com parâmetro "Id")
-Bolsa de Documentos do Cidadão -->> LargeFiles/iAP: AddDocumentResponse <br><br> (devolve documentId)
-LargeFiles/iAP -->> Entidade: AddDocumentResponse
-```
+![AddDocument - Diagrama](https://github.com/amagovpt/bolsadocumentos/blob/master/assets/images/AddDocument_diagrama.jpg?raw=true)
+
 ### Parâmetros de entrada
  - **DocumentToAdd:**
  
@@ -210,18 +182,7 @@ Na mensagem de resposta do pedido encontra-se o payload especificado no cap. “
 
 O seguinte diagrama representa o fluxo de invocação do webservice:
 
-```mermaid
-sequenceDiagram
-Entidade ->> LargeFiles/iAP: GetDocumentFile <br><br>(ws-addressing)
-LargeFiles/iAP -->> Entidade: HTTP ACCEPTED
-LargeFiles/iAP ->> Bolsa de Documentos do Cidadão: GetDocumentFile <br><br>(ws-addressing)
-Bolsa de Documentos do Cidadão -->> LargeFiles/iAP: HTTP ACCEPTED
-Bolsa de Documentos do Cidadão ->> LargeFiles/iAP: HTTP POST <br><br>(upload de ficheiro <br><br>com parâmetro "File" e guid com parâmetro "Id")
-LargeFiles/iAP -->> Bolsa de Documentos do Cidadão: HTTP OK
-Bolsa de Documentos do Cidadão -->> LargeFiles/iAP: GetDocumentFileResponse <br><br> (inclui na mensagem SOAP o payload com o GUID)
-LargeFiles/iAP -->> Entidade: GetDocumentFileResponse 
-Entidade ->> LargeFiles/iAP: HTTP GET <br><br> (download de ficheiro com parâmetro "Id")
-```
+![GetDocumentFile - Diagrama](https://github.com/amagovpt/bolsadocumentos/blob/master/assets/images/GetDocumentFile_diagrama.jpg?raw=true)
 
 ### Parâmetros de entrada
 | Nome do parâmetro | Descrição | Obrigatório | Lista de Valores (Chave – Descrição)
@@ -672,18 +633,7 @@ Na mensagem de resposta do pedido encontra-se o payload especificado no cap. “
 
 O seguinte diagrama representa o fluxo de invocação do webservice:
 
-```mermaid
-sequenceDiagram
-Entidade ->> LargeFiles/iAP: GetQRCodeDocumentFile <br><br>(ws-addressing)
-LargeFiles/iAP -->> Entidade: HTTP ACCEPTED
-LargeFiles/iAP ->> Bolsa de Documentos do Cidadão: GetQRCodeDocumentFile <br><br>(ws-addressing)
-Bolsa de Documentos do Cidadão -->> LargeFiles/iAP: HTTP ACCEPTED
-Bolsa de Documentos do Cidadão ->> LargeFiles/iAP: HTTP POST <br><br>(upload de ficheiro <br><br>com parâmetro "File" e guid com parâmetro "Id")
-LargeFiles/iAP -->> Bolsa de Documentos do Cidadão: HTTP OK
-Bolsa de Documentos do Cidadão -->> LargeFiles/iAP: GetQRCodeDocumentFileResponse <br><br> (inclui na mensagem SOAP o payload com o GUID)
-LargeFiles/iAP -->> Entidade: GetQRCodeDocumentFileResponse 
-Entidade ->> LargeFiles/iAP: HTTP GET <br><br> (download de ficheiro com parâmetro "Id")
-```
+![GetQRCodeDocumentFile - Diagrama](https://github.com/amagovpt/bolsadocumentos/blob/master/assets/images/GetQRCodeDocumentFile_diagrama.jpg?raw=true)
 
 ### Parâmetros de entrada
  - **Outros parâmetros:**
@@ -794,15 +744,7 @@ Este webservice tem como objetivo obter os documentos que o cidadão selecionou 
 
 O seguinte diagrama representa o fluxo de invocação do webservice:
 
-```mermaid
-sequenceDiagram
-Entidade ->> LargeFiles/iAP: Obter documento
-LargeFiles/iAP ->> Bolsa de Documentos: Obter documento
-Bolsa de Documentos ->> LargeFiles/iAP: Upload file
-LargeFiles/iAP ->> Bolsa de Documentos: Devolve guid file
-Bolsa de Documentos ->> LargeFiles/iAP: Devolve guid file
-LargeFiles/iAP ->> Entidade: Devolve guid file
-```
+![GetDocumentByEntityRequest - Diagrama](https://github.com/amagovpt/bolsadocumentos/blob/master/assets/images/GetDocumentByEntityRequest_diagrama.jpg?raw=true)
 
 ### Parâmetros de entrada
  - **Outros parâmetros:**
@@ -839,13 +781,7 @@ Este webservice tem como objetivo enviar documentos entre entidades.
 
 O seguinte diagrama representa o fluxo de invocação do webservice:
 
-```mermaid
-sequenceDiagram
-Entidade ->> iAP: Envio de documento
-iAP ->> Bolsa de Documentos: Envio de documento
-Bolsa de Documentos ->> iAP: Devolve OK/NOK
-iAP ->> Entidade: Devolve OK/NOK
-```
+![SendDocumentToEntityAsEntity - Diagrama](https://github.com/amagovpt/bolsadocumentos/blob/master/assets/images/SendDocumentToEntityAsEntity_diagrama.jpg?raw=true)
 
 ### Parâmetros de entrada
  - **To:**
@@ -903,18 +839,7 @@ Este webservice tem como objetivo adicionar um documento à área reservada da e
 
 O seguinte diagrama representa o fluxo de invocação do webservice:
 
-```mermaid
-sequenceDiagram
-Entidade ->> LargeFiles/iAP: HTTP POST <br><br>(upload de ficheiro <br><br> com parâmetro "File" e guid com parâmetro "Id")
-LargeFiles/iAP -->> Entidade: HTTP OK
-Entidade ->> LargeFiles/iAP: AddDocument <br><br>(invocação do webservice incluíndo payload)
-LargeFiles/iAP -->> Entidade: HTTP ACCEPTED
-LargeFiles/iAP ->> Bolsa de Documentos do Cidadão: AddDocument
-Bolsa de Documentos do Cidadão -->> LargeFiles/iAP: HTTP ACCEPTED
-Bolsa de Documentos do Cidadão ->> LargeFiles/iAP: HTTP GET <br><br>(download de ficheiro com parâmetro "Id")
-Bolsa de Documentos do Cidadão -->> LargeFiles/iAP: AddDocumentResponse <br><br> (devolve documentId)
-LargeFiles/iAP -->> Entidade: AddDocumentResponse
-```
+![addDocumentToEntityAsCitizen - Diagrama](https://github.com/amagovpt/bolsadocumentos/blob/master/assets/images/addDocumentToEntityAsCitizen_diagrama.jpg?raw=true)
 
 ### Parâmetros de entrada
  - **From:**
@@ -992,18 +917,66 @@ Na resposta do webservice é devolvido um ID atribuído ao documento na Platafor
 </soapenv:Envelope>
 ```
 
-##  ShareDocumentToCitizenAsCitizen
+##  ShareDocumentToEntityAsEntity
 Este webservice tem como objetivo partilhar documentos entre entidades.
 
 O seguinte diagrama representa o fluxo de invocação do webservice:
 
-```mermaid
-sequenceDiagram
-Entidade ->> iAP: Partilha de documento
-iAP ->> Bolsa de Documentos: Partilha de documento
-Bolsa de Documentos ->> iAP: Devolve OK/NOK
-iAP ->> Entidade: Devolve OK/NOK
+![ShareDocumentToEntityAsEntity - Diagrama](https://github.com/amagovpt/bolsadocumentos/blob/master/assets/images/ShareDocumentToEntityAsEntity_diagrama.jpg?raw=true)
+
+### Parâmetros de entrada
+ - **To:**
+
+| Nome do parâmetro | Descrição | Obrigatório | Lista de Valores (Chave – Descrição)
+|--|--|--|-
+| **EntityId** | Nipc da entidade | Sim | - 
+| **EntityName** | Nome da entidade | Sim | - 
+| **EntityEmail** | Email da entidade | Sim | - 
+
+- **Outros parâmetros:**
+
+| Nome do parâmetro | Descrição | Obrigatório | Lista de Valores (Chave – Descrição)
+|--|--|--|-
+| **DocumentIdList** | Id do documento | Sim | - 
+| **HasWritePermission** | Permissão de escrita no documento | Não | True/false 
+| **Process** | Se pretende apagar ficheiro apos enviar | Não | - 
+
+### Parâmetros de saída
+Na resposta do webservice é indicado o estado da execução do pedido.
+
+### Exemplo
+```markdown
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://ama.pt/wsdl">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsdl:shareDocumentToEntityAsEntity>
+         <shareDocumentToEntityAsEntityInput>
+             <UserAuthentication>
+			  <EntityNif>508184509</EntityNif>
+              <Username>entidadeexterna</Username>
+              <Password>123456</Password>
+            </UserAuthentication>
+            <to>
+               <EntityId>510150047</EntityId>
+               <EntityName>dasas</EntityName>
+               <EntityEmail>dasss@sapo.pt</EntityEmail>
+            </to>
+            <!--1 or more repetitions:-->
+            <DocumentIdList>76465</DocumentIdList>
+            <Process></Process>
+            <HasWritePermission>true</HasWritePermission>
+         </shareDocumentToEntityAsEntityInput>
+      </wsdl:shareDocumentToEntityAsEntity>
+   </soapenv:Body>
+</soapenv:Envelope>
 ```
+
+##  SendDocumentToCitizenAsCitizen
+Este webservice tem como objetivo enviar documentos entre cidadãos.
+
+O seguinte diagrama representa o fluxo de invocação do webservice:
+
+![SendDocumentToCitizenAsCitizen - Diagrama](https://github.com/amagovpt/bolsadocumentos/blob/master/assets/images/SendDocumentToCitizenAsCitizen_diagrama.jpg?raw=true)
 
 ### Parâmetros de entrada
  - **From:**
@@ -1013,9 +986,9 @@ iAP ->> Entidade: Devolve OK/NOK
 | **UserType** | Tipo de utilizador | Sim | NIC, NON, NCS, NIPC, NOA 
 | **UserId** | Id utilizador | Sim | - 
 
-- **To:**
-
-| Nome do parâmetro | Descrição | Obrigatório | Lista de Valores (Chave – Descrição)
+ - **To:**
+ 
+ | Nome do parâmetro | Descrição | Obrigatório | Lista de Valores (Chave – Descrição)
 |--|--|--|-
 | **UserType** | Tipo de utilizador | Sim | NIC, NON, NCS, NIPC, NOA 
 | **UserId** | Id utilizador | Sim | - 
@@ -1024,7 +997,7 @@ iAP ->> Entidade: Devolve OK/NOK
 
 - **Outros parâmetros:**
 
-| Nome do parâmetro | Descrição | Obrigatório | Lista de Valores (Chave – Descrição)
+ | Nome do parâmetro | Descrição | Obrigatório | Lista de Valores (Chave – Descrição)
 |--|--|--|-
 | **DocumentId** | Id do documento | Sim | - 
 | **DeleteDocumentFromOrigin** | Se pretende apagar ficheiro apos enviar | Sim | - 
