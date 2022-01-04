@@ -185,6 +185,7 @@ O seguinte diagrama representa o fluxo de invocação do webservice:
 ![GetDocumentFile - Diagrama](https://github.com/amagovpt/bolsadocumentos/blob/master/assets/images/GetDocumentFile_diagrama.jpg?raw=true)
 
 ### Parâmetros de entrada
+
 | Nome do parâmetro | Descrição | Obrigatório | Lista de Valores (Chave – Descrição)
 |--|--|--|-
 | **DocumentID** | ID do documento atribuído pela Plataforma de Documentos do Cidadão. | Sim | - 
@@ -196,6 +197,7 @@ Na resposta do webservice é incluído o payload com o GUID associado ao ficheir
 Este webservice tem como objetivo adicionar um link à área reservada da entidade.
 
 ### Parâmetros de entrada
+
 | Nome do parâmetro | Descrição | Obrigatório | Lista de Valores (Chave – Descrição)
 |--|--|--|-
 | **LinkUrl** | Hiperligação para onde o link redirecionará quando for selecionado. | Sim | - 
@@ -204,7 +206,7 @@ Este webservice tem como objetivo adicionar um link à área reservada da entida
 | **Title** | Título do link. | Sim | - 
 | **CollaboratorId** | NIF da Entidade colaboradora na produção do documento. | Não | - 
 | **CollaboratorDesignation** | Nome da Entidade colaboradora na produção do documento. | Não | - 
-| **CollaboratorType** | Pode ser definido com uma das chaves na lista de valores. | Não | CITIZEN (Cidadão) <br><br>PRIVATEENTITY (Entidade Privada) <br><br>PUBLICENTITY (Entidade Pública) 
+| **CollaboratorType** | Pode ser definido com uma das chaves na lista de valores. | Não | CITIZEN (Cidadão)<br><br>PRIVATEENTITY (Entidade Privada)<br><br>PUBLICENTITY (Entidade Pública)
 | **CreationDate** | Data de criação do documento. | Não | - 
 | **ResourceType** | Pode ser definido com uma das chaves na lista de valores. | Não | DOCPERSONAL (Documento com informação pessoal) <br><br>SERVAP (Resultado de serviço da AP) <br><br>SERVOTHER (Resultado de serviço (outro)) <br><br>DOCPROFESSIONAL (Documento com informação profissional) 
 | **SecurityClassification** | Pode ser definido com uma das chaves na lista de valores. | Não | RESERVED (Reservado) <br><br> NORESTRICTION (Sem restrições de acesso) 
@@ -217,6 +219,7 @@ Na resposta do webservice é indicado o identificador interno atribuído ao link
 Este webservice tem como objetivo retribuir a informação associada ao link.
 
 ### Parâmetros de entrada
+
 | Nome do parâmetro | Descrição | Obrigatório | Lista de Valores (Chave – Descrição)
 |--|--|--|-
 | **DocumentID** | ID do link que se pretende obter, atribuído pela Bolsa de Documentos do Cidadão. | Sim | - 
