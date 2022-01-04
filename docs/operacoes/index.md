@@ -185,6 +185,7 @@ O seguinte diagrama representa o fluxo de invocação do webservice:
 ![GetDocumentFile - Diagrama](https://github.com/amagovpt/bolsadocumentos/blob/master/assets/images/GetDocumentFile_diagrama.jpg?raw=true)
 
 ### Parâmetros de entrada
+- **Outros parâmetros:**
 
 | Nome do parâmetro | Descrição | Obrigatório | Lista de Valores (Chave – Descrição)
 |--|--|--|-
