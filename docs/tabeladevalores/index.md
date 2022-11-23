@@ -12,32 +12,31 @@
    </td>
   </tr>
   <tr>
-   <td>
-<strong>SUCCESS</strong>
+   <td>SUCCESS
    </td>
    <td>Pedido executado em sucesso.
    </td>
   </tr>
   <tr>
-   <td><strong>FAILED</strong>
+   <td>FAILED
    </td>
    <td>Pedido não executado.
    </td>
   </tr>
   <tr>
-   <td><strong>PERMISSION_DENIED</strong>
+   <td>PERMISSION_DENIED
    </td>
    <td>Utilizador sem permissões.
    </td>
   </tr>
   <tr>
-   <td><strong>VALIDATION_ERROR</strong>
+   <td>VALIDATION_ERROR
    </td>
    <td>Erro de validação.
    </td>
   </tr>
   <tr>
-   <td><strong>DOC_NOT_FOUND</strong>
+   <td>DOC_NOT_FOUND
    </td>
    <td>Documento não encontrado.
    </td>
@@ -56,14 +55,13 @@
    </td>
   </tr>
   <tr>
-   <td>
-<strong>PT</strong>
+   <td>PT
    </td>
    <td>Português
    </td>
   </tr>
   <tr>
-   <td><strong>EN</strong>
+   <td>EN
    </td>
    <td>Inglês
    </td>
