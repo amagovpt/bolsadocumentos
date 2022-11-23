@@ -1,14 +1,14 @@
 
 
-    3. **Tabela Estado da resposta - Status**
+# Tabela de valores
+
+## Tabela Estado da resposta - Status
 
 <table>
   <tr>
-   <td>
-    ID
+   <td>ID
    </td>
-   <td>
-    Value
+   <td>Value
    </td>
   </tr>
   <tr>
@@ -46,16 +46,13 @@
 
 
 
-
-    4. **Tabela Language**
+## Tabela Language
 
 <table>
   <tr>
-   <td>
-    ID
+   <td>ID
    </td>
-   <td>
-    Value
+   <td>Value
    </td>
   </tr>
   <tr>
@@ -75,91 +72,13 @@
 
 
 
-
-
-
-    5. ** Tabela ClassificationCode**
+## Tabela ClassificationCode
 
 <table>
   <tr>
-   <td>
-    ID
+   <td>ID
    </td>
-   <td>
-    Value
-   </td>
-  </tr>
-  <tr>
-   <td>
-TITLE
-   </td>
-   <td>Título
-   </td>
-  </tr>
-  <tr>
-   <td>PROC
-   </td>
-   <td>Procuração
-   </td>
-  </tr>
-  <tr>
-   <td>CERT
-   </td>
-   <td>Certidão
-   </td>
-  </tr>
-  <tr>
-   <td>CAD
-   </td>
-   <td>Caderneta
-   </td>
-  </tr>
-  <tr>
-   <td>DEC
-   </td>
-   <td>Declaração
-   </td>
-  </tr>
-  <tr>
-   <td>CERT2
-   </td>
-   <td>Certificado
-   </td>
-  </tr>
-  <tr>
-   <td>CEDM
-   </td>
-   <td>Cédula Militar
-   </td>
-  </tr>
-  <tr>
-   <td>CARD
-   </td>
-   <td>Cartão
-   </td>
-  </tr>
-  <tr>
-   <td>CESS
-   </td>
-   <td>Cessação
-   </td>
-  </tr>
-  <tr>
-   <td>COMP
-   </td>
-   <td>Comprovativo
-   </td>
-  </tr>
-  <tr>
-   <td>CONT
-   </td>
-   <td>Contrato
-   </td>
-  </tr>
-  <tr>
-   <td>CURR
-   </td>
-   <td>Curriculum Vitae
+   <td>Value
    </td>
   </tr>
   <tr>
@@ -169,91 +88,40 @@ TITLE
    </td>
   </tr>
   <tr>
-   <td>ESC
+   <td>450.30.002
    </td>
-   <td>Escritura
-   </td>
-  </tr>
-  <tr>
-   <td>FIC
-   </td>
-   <td>Ficha
+   <td>Certificação de habilitações ou qualificações
    </td>
   </tr>
   <tr>
-   <td>LIV
+   <td>450.30.502
    </td>
-   <td>Livrete
-   </td>
-  </tr>
-  <tr>
-   <td>BOOK
-   </td>
-   <td>Livro
+   <td>Emissão de declarações comprovativas
    </td>
   </tr>
   <tr>
-   <td>PART 
+   <td>450.30.003
    </td>
-   <td>Participação
-   </td>
-  </tr>
-  <tr>
-   <td>PASS 
-   </td>
-   <td>Passaporte
+   <td>Emissão de certidões
    </td>
   </tr>
   <tr>
-   <td>PLA
+   <td>750.30.602
    </td>
-   <td>Plano
+   <td>Reconhecimento, creditação e validação de competências e qualificações
    </td>
-  </tr>
-  <tr>
-   <td>PLANT
-   </td>
-   <td>Planta
-   </td>
-  </tr>
-  <tr>
-   <td>RECEIPT
-   </td>
-   <td>Recibo
-   </td>
-  </tr>
-  <tr>
-   <td>SEC
-   </td>
-   <td>Seguro
-   </td>
-  </tr>
-  <tr>
-   <td>TERM
-   </td>
-   <td>Termo
-   </td>
-  </tr>
-  <tr>
-   <td>TEST
-   </td>
-   <td>Testamento
-   </td>
-  </tr>
+  </tr>  
 </table>
 
 
 
-
-    6. ** Tabela CollaboratorType**
+## Tabela CollaboratorType
 
 <table>
   <tr>
-   <td>
-    ID
+   <td>ID
    </td>
-   <td>
-    Value
+   <td>Value
    </td>
   </tr>
   <tr>
@@ -279,21 +147,17 @@ CITIZEN
 
 
 
-
-    7. **Tabela ResourceType**
+## Tabela ResourceType
 
 <table>
   <tr>
-   <td>
-    ID
+   <td>ID
    </td>
-   <td>
-    Value
+   <td>Value
    </td>
   </tr>
   <tr>
-   <td>
-DOCPERSONAL
+   <td>DOCPERSONAL
    </td>
    <td>Documento com informação pessoal
    </td>
@@ -320,21 +184,17 @@ DOCPERSONAL
 
 
 
-
-    8. **Tabela SecurityClassification**
+## Tabela SecurityClassification
 
 <table>
   <tr>
-   <td>
-    ID
+   <td>ID
    </td>
-   <td>
-    Value
+   <td>Value
    </td>
   </tr>
   <tr>
-   <td>
-RESERVED
+   <td>RESERVED
    </td>
    <td>Reservado
    </td>
@@ -349,21 +209,17 @@ RESERVED
 
 
 
-
-    9. **Tabela EditorType**
+## Tabela EditorType
 
 <table>
   <tr>
-   <td>
-    ID
+   <td>ID
    </td>
-   <td>
-    Value
+   <td>Value
    </td>
   </tr>
   <tr>
-   <td>
-CITIZEN
+   <td>CITIZEN
    </td>
    <td>Cidadão
    </td>
@@ -384,21 +240,17 @@ CITIZEN
 
 
 
-
-    10. **Tabela ResourceType**
+## Tabela ResourceType
 
 <table>
   <tr>
-   <td>
-    ID
+   <td>ID
    </td>
-   <td>
-    Value
+   <td>Value
    </td>
   </tr>
   <tr>
-   <td>
-DOCPERSONAL
+   <td>DOCPERSONAL
    </td>
    <td>Documento com informação pessoal
    </td>
@@ -425,21 +277,17 @@ DOCPERSONAL
 
 
 
-
-    11. **Tabela WritePermissions**
+## Tabela WritePermissions
 
 <table>
   <tr>
-   <td>
-    ID
+   <td>ID
    </td>
-   <td>
-    Value
+   <td>Value
    </td>
   </tr>
   <tr>
-   <td>
-FALSE
+   <td>FALSE
    </td>
    <td>Só de leitura
    </td>
@@ -451,4 +299,3 @@ FALSE
    </td>
   </tr>
 </table>
-
