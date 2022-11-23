@@ -1,6 +1,6 @@
 
 
-# Tabela de valores
+# Tabelas de valores
 
 ## Tabela Estado da resposta - Status
 
